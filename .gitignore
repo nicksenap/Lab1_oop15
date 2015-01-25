@@ -1,0 +1,10 @@
+
+*.xml
+
+*.iml
+
+*.class
+
+.idea/.name
+
+out/production/currency/valutor.txt
