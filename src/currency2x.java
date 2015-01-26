@@ -5,26 +5,24 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class currency2 {
+public class currency2x {
     public static void main (String args[]) throws IOException {
-        //This is the main method to the program.
-        String val = null;
-        String var = null;
-        String mot = null;
-        try{val = args[0];
-            var = args[1];}
-        catch (ArrayIndexOutOfBoundsException exception){
+        if (args.length != 2 && args.length != 3){
             System.out.println("Usage: java Converter currency amount [currency]");
             System.exit(0);
-        }// If the "args" is shorter than 2, program will throw a exception and break.
+        }
+        //This is the main method to the program.
+        String val = args[0];
+        String var = args[1];
+        String mot = null;
+        // If the "args" is shorter than 2, program will throw a exception and break.
 
         if (args.length == 3){  //If user hasn't give the third course,
-                                // program will use "SEK" as default.
+            // program will use "SEK" as default.
             mot = args[2];
-        }else if(args.length ==2){
+        }else {
             mot = "SEK";
-        }else{System.out.println("Usage: java Converter currency amount [currency]");
-                System.exit(0);}
+        }
         Scanner sc=new Scanner(new File("valutor.txt"));// Use Scanner method to read the txt file.
         List<String>valuta= new ArrayList<String>();  //Create 3 empty Array list.
         List<String>vardet= new ArrayList<String>();
