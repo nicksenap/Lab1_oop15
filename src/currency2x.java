@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 class CurrencyConverter {
@@ -10,7 +9,7 @@ class CurrencyConverter {
 
     // Creates a converter class based on an input file.
     public CurrencyConverter( String file ) throws Exception {
-	names= new ArrayList<String>();  //Create 3 empty Array list.
+	    names= new ArrayList<String>();  //Create 3 empty Array list.
         descs = new ArrayList<String>();
         vals = new ArrayList<Double>();
 
